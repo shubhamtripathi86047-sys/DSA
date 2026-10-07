@@ -1,23 +1,18 @@
-//WAP to swap a array element first position to last position.
 #include<stdio.h>
+#include<string.h>
 main()
 {
-	int n;
-	printf("Enter array size:- ");
-	scanf("%d",&n);
-	int arr[n];
-	for(int i=0; i<n; i++)
+	char name[50], rev[50];
+	printf("Enter name:- ");
+	gets(name);
+	strcpy(rev, name);
+	strrev(rev);
+	printf("%s\n",rev);
+	if(strcmp(name,rev)==0)
 	{
-		printf("Enter element:- ");
-		scanf("%d",&arr[i]);
+		printf("Palindrome..");
 	}
-	printf("Replace Number:- \n");
-
-		int temp=arr[0];
-		arr[0] = arr[n-1];
-		arr[n-1]= temp; 
-	
-	for(int i=0;i<n;i++){
-		printf("Swaped Array is : %d \n",arr[i]);
+	else{
+		printf("Not Palindrome..");
 	}
 }
